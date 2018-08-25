@@ -1,0 +1,15 @@
+server:
+  port: 9111
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+zuul:
+  routes:
+    customer:                                               # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
+      path: /customer/**                                    # 想要映射到的路径
+      service-id: customer            # Eureka中的serviceId
+    material:                                               # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
+      path: /material/**                                    # 想要映射到的路径
+      service-id: material            # Eureka中的serviceId
