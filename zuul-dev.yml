@@ -6,13 +6,13 @@ zuul:
   routes:
     customer:                                               # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
       path: /customer/**                                    # 想要映射到的路径
-      service-id: customer            # Eureka中的serviceId
+      service-id: customer-server            # Eureka中的serviceId
     material:                                               # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
       path: /material/**                                    # 想要映射到的路径
-      service-id: material            # Eureka中的serviceId
+      service-id: material-server            # Eureka中的serviceId
     file:                                               # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
       path: /file/**                                    # 想要映射到的路径
-      service-id: file            # Eureka中的serviceId
+      service-id: file-server            # Eureka中的serviceId
 #zuul设置超时时间
 hystrix:
   command:
